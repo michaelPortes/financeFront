@@ -1,0 +1,6 @@
+.cards-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 89vh;
+}

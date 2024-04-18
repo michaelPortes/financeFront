@@ -1,0 +1,9 @@
+.menu{
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid #4d576b;
+    padding: 0 30px 0 30px;
+}
