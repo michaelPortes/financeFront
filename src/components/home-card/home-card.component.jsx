@@ -5,22 +5,15 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
 import './home-card.style.css'
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
 
-const card = ({button, tittle}) => (
+const card = ({button, redirect, title}) => (
   <React.Fragment>
     <CardContent className='card-content'>
       <Typography variant="h5" component="div">
-        {tittle}
+        {title}
       </Typography>
       <Typography sx={{ mb: 1.5 }} color="text.secondary">
         adjective
@@ -33,16 +26,18 @@ const card = ({button, tittle}) => (
     </CardContent>
     <CardActions>
       <Button size="small">
-        {button}
+        <Link to={'/' + redirect}>
+          {button}
+        </Link>
       </Button>
     </CardActions>
   </React.Fragment>
 );
 
-export default function OutlinedCard({button, ...tittle }) {
+export default function OutlinedCard({button, redirect, ...title }) {
   return (
     <Box sx={{ minWidth: 275 }}>
-      <Card variant="outlined">{card({button, ...tittle})}</Card>
+      <Card variant="outlined">{card({button, redirect, ...title})}</Card>
     </Box>
   );
 }

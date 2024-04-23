@@ -1,19 +1,21 @@
 import { Route, Routes } from 'react-router-dom';
-import Menu from './routes/menu/menu.component';
-import Home from './routes/home/home.component';
+import Menu from './routes/menu/menu.component';  
+import Home from  './routes/home/home.component';
+import Bills from './routes/bills/bills.component';
 
 import './App.css';
 
 const App = () => {
   return (
-    <div className='App'>
-    <Routes>
-      <Route exact path='/' element={<Menu />}>
-        <Route exact index element={<Home />}/>
-      </Route>
-    </Routes>
-    </ div>
+    <div className='App App-header'>
+      <Routes>
+        <Route exact path="/" element={<Menu />}>
+          <Route exact index element={<Home />} />
+          <Route exact path="/bills" element={<Bills />} />
+        </Route>
+      </Routes>
+    </div>
   )
-}
+};
 
 export default App;

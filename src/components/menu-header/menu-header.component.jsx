@@ -8,10 +8,12 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import CategoryIcon from '@mui/icons-material/Category';
+import PersonIcon from '@mui/icons-material/Person';
 
 import './menu-header.style.css'
+import { Error } from '@mui/icons-material';
 
 export default function MenuHeader() {
   const [open, setOpen] = React.useState(false);
@@ -20,11 +22,11 @@ export default function MenuHeader() {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {['Gastos', 'Categorias', 'Usuário'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index = 0 ? <AttachMoneyIcon /> : index = 1 ? <CategoryIcon/> : index = 2 ? <PersonIcon/> : <Error/>}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -32,18 +34,6 @@ export default function MenuHeader() {
         ))}
       </List>
       <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
     </Box>
   );
 

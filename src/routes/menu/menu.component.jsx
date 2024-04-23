@@ -1,18 +1,20 @@
-import * as React from 'react';
+import {Fragment} from 'react'
+import { Link, Outlet } from 'react-router-dom';
 import MenuHeader from "../../components/menu-header/menu-header.component";
 import MenuUser from '../../components/menu-user/menu-user.component';
 
 import './menu.style.css'
-import ResponsiveGrid from '../../components/home-grid/home-grid.component';
 
-export default function Menu(){
+const Menu = () => {
 
 
     return( 
-    <>
+    <Fragment>
         <div className='menu'>
             <div>
-                Finance<b>Controller</b>
+                <Link to='/'>
+                    Finance<b>Controller</b>
+                </Link>
             </div>
             <div className='center-menu'>
                 <MenuHeader/>
@@ -21,7 +23,10 @@ export default function Menu(){
                 <MenuUser/>
             </div>
         </div>
-    </>
+        <Outlet />
+    </Fragment>
     )
 
 }
+
+export default Menu;
