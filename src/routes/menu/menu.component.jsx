@@ -11,7 +11,7 @@ const Menu = () => {
     return( 
     <Fragment>
         <div className='menu'>
-            <div>
+            <div className='name'>
                 <Link to='/'>
                     Finance<b>Controller</b>
                 </Link>

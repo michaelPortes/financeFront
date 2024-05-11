@@ -1,0 +1,12 @@
+.body-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trash{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+}

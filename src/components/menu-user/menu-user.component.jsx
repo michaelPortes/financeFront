@@ -16,11 +16,9 @@ const MenuUser = () => {
         
       }
     )
-    .catch( err => console.log('menuUserErr: ', err))
+    .catch( err => alert('menuUserErr: ', err))
       
     }, [])
-    
-    console.log('COMO VEM: ', user)
   return (
     <div>
       {
