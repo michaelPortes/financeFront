@@ -56,7 +56,6 @@ const SimpleTable = () => {
       getCategories()
       .then(event => {
         setValueTables(event.data);
-        console.log(valueTables)
       })
       .catch(error => {
         console.error('Erro ao buscar dados:', error );

@@ -1,10 +1,16 @@
-import SimpleTable from '../../components/tables/bills/categories-table.components';
+import InputCategories from '../../components/input/categories/categories-input.component.jsx';
+import SimpleTable from '../../components/tables/categories/categories-table.components.jsx';
 import './categoires.styles.css'
 
 const Categories = () => {
     return(
         <div>
-            <SimpleTable />
+            <div className='input-categories'>
+                <InputCategories />
+            </div>
+            <>
+                <SimpleTable />
+            </>
         </div>
     )
 }
