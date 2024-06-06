@@ -32,9 +32,9 @@ const columns = [
       renderCell: (params) => {
         const onClick = () => {
           const id = params.row.id;
-    //       delelteLaunch(id);
-    //       .then(() => window.location.reload())
-    //       .catch(event => (console.log('ERR: ', event)))
+          delelteLaunch(id)
+          .then(() => window.location.reload())
+          .catch(event => (console.log('ERR: ', event)))
         };
   
         return <button className='trash' onClick={onClick}><DeleteForeverIcon/></button>;
