@@ -34,7 +34,7 @@ const columns = [
     field: 'delete',
     headerName: 'Delete',
     sortable: false,
-    width: 100,
+    width: 100, 
     disableClickEventBubbling: true,
     renderCell: (params) => {
       const onClick = () => {

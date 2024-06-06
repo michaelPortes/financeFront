@@ -1,10 +1,13 @@
+import TableLaunch from '../../components/tables/launch/launch-table.component';
+
 import './launch.styles.css'
+
 
 const Launch = () => {
 
     return(
         <div>
-            Launch
+            <TableLaunch />
         </div>
     )
 }
